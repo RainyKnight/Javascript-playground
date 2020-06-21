@@ -12,21 +12,40 @@
 
   <title>JS Playground</title>
 
-  <link rel="stylesheet" type="text/css" href="style.css">  
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+  <div class="center">
 
-  <h1>JS Playground!</h1>
+    <h1>JS Playground!</h1>
+    <p>Note: Many of these happen in the console log</p>
 
 
-  <button type="button" class="btn btn-primary" onclick="thingAMaJig()">Thing-A-Ma-Jig</button>
-  <!-- <button type="button" class="btn btn-primary" onclick="runCode()">Start</button>
-  <button type="button" class="btn btn-primary" onclick="runCode()">Start</button> -->
+    <button type="button" class="btn btn-primary" onclick="beerOnTheWall()">Beer On The Wall</button>
+    <button type="button" class="btn btn-primary" onclick="thingAMaJig()">Thing-A-Ma-Jig</button>
+    <button type="button" class="btn btn-primary" onclick="sherlock()">Sherlock</button>
+    <!-- <button type="button" class="btn btn-primary" onclick="runCode()">Start</button> -->
+  </div>
 
+  <footer class="footer">
+    <div class="container">
+      <p style="font-size:80%">
+        <br>
+        Copyright © Lucas Stoltman
+
+        <!-- A script to always pull the current year -->
+        <script type="text/javascript">
+          document.write(new Date().getFullYear());
+        </script>.
+      </p>
+    </div>
+  </footer>
 
   <!-- Putting the external src in the body so the contents load before the js is good practice -->
-  <script src="script.js"></script>
+  <script src="beerOnTheWall.js"></script>
+  <script src="thingAMaJig.js"></script>
+  <script src="sherlock.js"></script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

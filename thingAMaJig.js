@@ -1,3 +1,4 @@
+// function parsing practice
 function thingAMaJig() {
 
     // print "clunk" for every time that's passed in
