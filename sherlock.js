@@ -1,16 +1,29 @@
+// function scope practice local vs global
 function sherlock() {
-var balance = 10500;
-var cameraOn = true;
+    // this is the REAL "global" balance of money in the scenerio
+    var balance = 10500;
+    var cameraOn = true;
 
-function steal(balance, amount) {
-    cameraOn = false;
-    if (amount < balance) {
-        balance = balance - amount;
+    // the real balance was never actually stolen because the global variable 
+    // is shadowed by a local parameter with the same name...
+    function steal(balance, amount) {
+        cameraOn = false;
+
+        console.log("Shadowed local balance BEFORE: $" + balance);
+        if (amount < balance) {
+            balance = balance - amount;
+            console.log("Shadowed local balance AFTER: $" + balance);
+        }
+        return amount;
+        cameraOn = true;
     }
-    return amount;
-    cameraOn = true;
-}
 
-var amount = steal(balance, 1250);
-alert("Criminal: you stole " + amount + "!");
+    console.log("Global balance BEFORE: $" + balance);
+    var amount = steal(balance, 1250);
+    console.log("Global balance AFTER: $" + balance);
+
+    alert("Criminal: you stole " + amount + "!");
+    alert("Except they didn't really ;)");
 }
+// Of course none of these values are ACTUALLY global to this playground, 
+// because I don't want them messing up any future additions!

@@ -9,7 +9,7 @@ function thingAMaJig() {
             num--;
         }
     }
-    
+
     function thingamajig(size) {
         var facky = 1;
         clunkCounter = 0;
@@ -27,7 +27,7 @@ function thingAMaJig() {
             clunk(facky);
         }
     }
-    
+
     function display(output) {
         console.log(output);
         clunkCounter++;
@@ -37,20 +37,20 @@ function thingAMaJig() {
     var clunkCounter = 0;
     thingamajig(0);
     console.log(clunkCounter);
-    
+
     // "thunk"
     // 1
     clunkCounter = 0;
     thingamajig(1);
     console.log(clunkCounter);
-    
+
     // "clunk"
     // "clunk"
     // 2 * 1 = "2"
     clunkCounter = 0;
     thingamajig(2);
     console.log(clunkCounter);
-    
+
     // "clunk"
     // "clunk"
     // "clunk"
@@ -61,7 +61,7 @@ function thingAMaJig() {
     clunkCounter = 0;
     thingamajig(3);
     console.log(clunkCounter);
-    
+
     // "clunk"
     // "clunk"
     // "clunk"
@@ -90,7 +90,7 @@ function thingAMaJig() {
     clunkCounter = 0;
     thingamajig(4);
     console.log(clunkCounter);
-    
+
     // "clunk"
     // "clunk"
     // "clunk"
@@ -227,6 +227,4 @@ function thingAMaJig() {
     clunkCounter = 0;
     thingamajig(5);
     console.log(clunkCounter);
-    
-    
 }
